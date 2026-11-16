@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dual-branch-gnn"
+version = "1.0.0"
+description = "Joint estimation of direct and spillover effects on networks with a dual-branch graph neural network"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "torch>=2.0"]
+
+[tool.setuptools]
+packages = ["dual_branch_gnn"]
