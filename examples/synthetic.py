@@ -2,7 +2,7 @@ import numpy as np
 from scipy import sparse
 from scipy.spatial import cKDTree
 
-from dual_branch_gnn import estimate_effects
+from spillnet import estimate_effects
 
 rng = np.random.default_rng(0)
 n, k = 4000, 6

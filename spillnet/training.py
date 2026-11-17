@@ -3,7 +3,7 @@ import torch
 import torch.nn.functional as F
 
 from .losses import balance, poisson_deviance
-from .model import DualBranchGNN
+from .model import SpillNet
 
 ALPHA = 0.01
 BETA = 1.0
@@ -18,7 +18,7 @@ def fit(X, WX, W, T, S, Y, train, val, seed, family="gaussian", offset=None, dev
     """Trains one model and returns its (n, 4) potential outcomes."""
     torch.manual_seed(seed)
     np.random.seed(seed % 2**31)
-    model = DualBranchGNN(X.shape[1], family).to(device)
+    model = SpillNet(X.shape[1], family).to(device)
     opt = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE, weight_decay=WEIGHT_DECAY)
     T_t = torch.from_numpy(T.astype(np.int64)).to(device)
     S_t = torch.from_numpy(S.astype(np.int64)).to(device)

@@ -44,7 +44,7 @@ class OutcomeHeads(nn.Module):
         return torch.stack([head(h).squeeze(-1) for head in self.heads], dim=1)
 
 
-class DualBranchGNN(nn.Module):
+class SpillNet(nn.Module):
     """Local branch on X, neighbourhood branch on WX, four outcome heads and two propensity heads."""
 
     def __init__(self, n_covariates, family="gaussian"):
