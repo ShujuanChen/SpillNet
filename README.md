@@ -1,10 +1,10 @@
 # Estimating direct and spillover effects of urban interventions with a graph neural network
 
-This repository contains SpillNet, the graph neural network (GNN) of the study *Estimating direct and spillover effects of urban interventions with a graph neural network*. The overall study design is shown in Figure 1, and the repository holds the model of panel c. The example in [examples/synthetic.py](examples/synthetic.py) runs on synthetic data with known effects and needs no restricted data.
+This repository contains SpillNet, the dual-branch graph neural network (GNN) of the study *Estimating direct and spillover effects of urban interventions with a graph neural network*. The overall study design is shown in Figure 1, and the repository holds the model of panel c. The example in [examples/synthetic.py](examples/synthetic.py) runs on synthetic data with known effects and needs no restricted data.
 
 ![Overall study design](Schematic_study_design.png)
 
-<sub>Overview of the study. (a) Network setting and definitions of direct and spillover effects based on an area's own treatment and neighbouring exposure, shown for a small area in Birmingham and the areas within 1 km. (b) Identification under consistency, exposure mapping, conditional exchangeability and positivity. (c) SpillNet, with separate local and neighbourhood branches, four outcome heads and joint estimation of direct and spillover effects. (d) Semi-synthetic evaluation using two social networks and a geographical network of English small areas, with the comparison methods. (e) Application to tree cover and all-cause mortality in urban England, estimating the effects of an area's own tree cover and that of surrounding areas.</sub>
+<sub>Overview of the study. (a) Network setting and definitions of direct and spillover effects based on an area's own treatment and neighbouring exposure, shown for a small area in Birmingham and the areas within 1 km. (b) Identification under consistency, exposure mapping, conditional exchangeability and positivity. (c) SpillNet (dual-branch GNN), with separate local and neighbourhood branches, four outcome heads and joint estimation of direct and spillover effects. (d) Semi-synthetic evaluation using two social networks and a geographical network of English small areas, with the comparison methods. (e) Application to tree cover and all-cause mortality in urban England, estimating the effects of an area's own tree cover and that of surrounding areas.</sub>
 
 ## Overview
 
